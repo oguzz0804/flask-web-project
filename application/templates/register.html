@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <title>Register</title>
+    <style>
+      .center1 {
+        margin: auto;
+        width: 30%;
+        padding: 10px;
+      }
+    </style>
+    <style>
+      .center2 {
+        margin: auto;
+        width: 25%;
+        padding: 50px;
+      }
+    </style>
+    <style>
+      .button {
+        margin: auto;
+        width: 15%;
+        padding: 20px;
+      }
+    </style>
+    <style>
+      .register {
+        margin: auto;
+        width: 26%;
+        padding: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="center2">Register Page</h1>
+
+    <form class="center1" method="POST" action="" class="w3-container">
+      {{ form.hidden_tag() }}
+      <p class="w3-input">{{ form.username }}</p>
+      <p class="w3-input">{{ form.password }}</p>
+      <p class="button">{{ form.submit }}</p>
+    </form>
+
+    <div class="register">
+      <a href="{{ url_for('login') }}">Already have an account? Log In</a>
+    </div>
+  </body>
+</html>
